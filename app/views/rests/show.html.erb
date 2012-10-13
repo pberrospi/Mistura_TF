@@ -1,0 +1,21 @@
+<br></br>
+<br></br>
+<br></br>
+<table>
+<tr>
+ <td> nombre </td>
+ <td> dirección </td>
+ <td> Long </td>
+ <td> Lat </td>
+</tr>
+<% @restaurantes.each do |rest| %>
+<tr>
+ <td><%= rest.nombre %> </td>
+ <td> <%= rest.direccion  %></td>
+ <td> <%= rest.lat  %></td>
+ <td> <%= rest.lng  %></td>
+</tr>
+<% end %>
+</table>
+
+<%= link_to 'Back', rests_path %>

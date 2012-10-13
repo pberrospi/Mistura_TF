@@ -1,0 +1,25 @@
+
+.<br></br>
+<h1>Nuevo restaurante</h1>
+<%= form_for(@restaurantes) do |f| %>
+<table>
+    <tr>
+        <td>Restaurante:</td>
+		<td><%= f.text_field :nombre %></td>
+	</tr>
+    <tr>
+        <td>Dirección:</td>
+		<td><%= f.text_field :direccion %></td>
+	</tr>
+    <tr>
+        <td>Longitud:</td>
+		<td><%= f.text_field :lat %></td>
+	</tr>
+    <tr>
+        <td>Latitud:</td>
+		<td><%= f.text_field :lng %></td>
+	</tr>
+	<tr>
+		<td colspan='2' align='center' ><%= f.submit 'Guardar' %></td>
+	</tr>
+<% end %>
