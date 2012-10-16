@@ -1,11 +1,11 @@
 <br></br>
-<br></br>
 <table border ='1'>
-<tr>
- <td> nombre </td>
- <td> dirección </td>
- <td> Long </td>
- <td> Lat </td>
+<tr><strong>Listado de Restaurantes</strong></tr>
+<tr align='center'>
+ <td> Nombre </td>
+ <td> Dirección </td>
+ <td> Longitud </td>
+ <td> Latitud </td>
 </tr>
 <% @restaurantes.each do |rest| %>
 <tr>
@@ -16,5 +16,5 @@
 </tr>
 <% end %>
 </table>
-
+<br></br>
 <%= link_to 'Back', rests_path %>
