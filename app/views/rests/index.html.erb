@@ -49,9 +49,11 @@
         </div>
       </div>
       <div class="span6">
-        <p>Nuestras Restaurantes:</p>
-        <pre class="prettyprint">Restaurantes</pre>
-        <p><strong>Adicional</strong> .</p>
+        <p><strong>Nuestras Restaurantes:</strong></p>
+          <% @restaurantes.each do |rest| %>
+           <li><strong><%= rest.nombre %></strong></li>
+          <% end %>
+        </br>
         <p><span class="label notice">Datos</span>Si desea ver mayor información de click en los Iconos Rojos.:</p>
         
       </div>

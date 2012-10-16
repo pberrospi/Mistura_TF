@@ -1,5 +1,8 @@
 class RestsController < ApplicationController
 
+  def index
+    @restaurantes = Rest.find(:all)
+  end
 
   def show
       #@restaurantes = Rest.find(params[:id])
