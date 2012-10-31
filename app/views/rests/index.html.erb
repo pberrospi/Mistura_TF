@@ -17,22 +17,18 @@
         lat: -12.043333,
         lng: -77.028333
       });
+      
+      <% @restaurantes.each do |i| %>
       map.addMarker({
-        lat: -12.043333,
-        lng: -77.03,
-        title: 'La Rosa Nautica',
+        lat: <%= i.lat %>,
+        lng: <%= i.lng %>,
+        title: "<%= i.nombre %>",
         infoWindow: {
-          content: '<p>La Rica Delicia</p></br><p>Av. Larco 142 - Miraflores</p>'
+          content: "<%= i.nombre %> <p><p> <%= i.direccion %>"
         }
       });
-      map.addMarker({
-        lat: -12.042,
-        lng: -77.028333,
-        title: 'Don Gusto',
-        infoWindow: {
-          content: '<p>Don Gusto</p></br><p>Av. Principal 2365 - Surco</p>'
-        }
-      });
+
+      <% end %>
     });
   </script>
 </head>
